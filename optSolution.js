@@ -1,5 +1,5 @@
 const solution = (arr = [], x, y) => {
-	let prefix_sum = 0;
+	let sum = 0;
 	let end = 0;
 	let start = -1;
 	let max_length = 0;
@@ -12,13 +12,13 @@ const solution = (arr = [], x, y) => {
 		}
 
 		if (num === x) {
-			prefix_sum += 1;
-			if (prefix_sum === 0) {
+			sum += 1;
+			if (sum === 0) {
 				end = i;
 			}
 		} else if (num === y) {
-			prefix_sum -= 1;
-			if (prefix_sum === 0) {
+			sum -= 1;
+			if (sum === 0) {
 				end = i;
 			}
 		}
